@@ -20,13 +20,13 @@ const message = document.getElementById("message").value;
 
 const gender = document.querySelector('input[name="gender"]:checked')?.value || "Nie podano";
 
-const interest = Array.from(document.querySelectorAll('input[name="interests]:checked').map(checkbox =>checkbox.value).join(", ") || "Brak zainteresowan");
+const interest = Array.from(document.querySelectorAll('input[name="interests"]:checked')).map(checkbox =>checkbox.value).join(", ") || "Brak zainteresowan";
 const resultDIV = document.getElementById("result");
 resultDIV.innerHTML = `
 <h3>Podsumowanie<h3>
 <p><strong>Imie:</strong>${name}</p>
 <p><strong>Email:</strong>${email}</p>
 <p><strong>Plec:</strong>${gender}</p>
-<p><strong>Zainteresowania::</strong>${interest}</p>
+<p><strong>Zainteresowania:</strong>${interest}</p>
 <p><strong>Wiadomosc:</strong>${message}</p>`;
 });
