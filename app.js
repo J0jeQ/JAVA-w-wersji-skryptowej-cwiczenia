@@ -19,13 +19,15 @@ if(name.length <2){
 }
 
 if(message.length <5){
-    displayError("message","Wiadomosc musi miec wiecej niz 5 slow")
+    displayError("message","Wiadomosc musi miec wiecej niz 5 slow");
     isvalid = false;
 }
-// if(!email.include("@")){
-//     displayError("email","Email musi miec @")
-//     isvalid - false;
-// }
+
+const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+if(!emailPattern.test(email)){
+    displayError("email","Podaj poprawny adres email");
+    isvalid = false;
+}
 
 if(isvalid){
     const resultDIV = document.getElementById("result");
