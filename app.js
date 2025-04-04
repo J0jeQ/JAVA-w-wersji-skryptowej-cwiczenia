@@ -9,7 +9,9 @@ const email = document.getElementById("email").value.trim();
 const message = document.getElementById("message").value.trim();
 const gender = document.querySelector('input[name="gender"]:checked')?.value || "Nie podano";
 const interest = Array.from(document.querySelectorAll('input[name="interests"]:checked')).map(checkbox =>checkbox.value).join(", ") || "Brak zainteresowan";
-
+const phone = document.getElementById("phone").value;
+const wiek = document.getElementById("age").value;
+const contact = document.querySelector('input[name="contactConsent"]:checked')?true:false;
 clearErrors();
 const isvalid = true;
 
